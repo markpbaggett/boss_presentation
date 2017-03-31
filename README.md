@@ -2,9 +2,9 @@
 
 ## About Presentation
 
-The following materials are for use in the [Pico 8](http://www.lexaloffle.com/pico-8.php) workshop at [Big Orange Stem Saturday](https://www.lib.utk.edu/outreach/soil/b-o-s-s/) on April 8, 2017.
+The following materials are for use in the [Pico-8](http://www.lexaloffle.com/pico-8.php) workshop at [Big Orange Stem Saturday](https://www.lib.utk.edu/outreach/soil/b-o-s-s/) on April 8, 2017.
 
-## About Pico 8
+## About Pico-8
 
 [PICO-8](http://www.lexaloffle.com/pico-8.php) is a fantasy console for making, sharing and playing tiny games and other computer programs. When you turn it on, the machine greets you with a shell for typing in Lua commands and provides simple built-in tools for creating your own cartridges.
 
@@ -20,7 +20,14 @@ Some technical specifications:
 	* A Pause Button
 	* ![Key Config](images/keyconfig.png)
 
-## Starting Up Pico 8
+## Other Helpful Links
+
+* [Pico-8 Zines](http://pico8fanzine.bigcartel.com/): Pico-8 zines are awesome 48-page fanzines made by and for PICO-8 users.
+* [Pico Awesome List](https://github.com/felipebueno/awesome-PICO-8): A curated list of awesome PICO-8 resources, carts, tools, and more.
+* [A Pico-8 Space Shooter in 16 Gifs](https://ztiromoritz.github.io/pico-8-shooter/): Learn how to write a spaceshooter in Pico-8 in 16 gifs.
+* [Pico-8 Cheat Sheet](https://ztiromoritz.github.io/pico-8-spick/index_en.html): Awesome Cheat sheet for Pico-8.
+
+## Starting Up Pico-8
 
 ## The Sprite Editor
 
@@ -59,7 +66,7 @@ To get started, let's write some code to represent the hero of our game.  In you
 
 We also need variables for where we will display our sprites on the screen.  Remember, the display is 128 x 128 pixels. Let's write variables to put our food in the upper-left corner of the screen, and our hero lower and to the right.
 
-##### Our Code Should Look Like:
+##### Our New Code Should Look Like:
 ```
 start_hero = 12
 hero = start_hero
@@ -80,7 +87,7 @@ In Pico8, there are 3 special functions that are called **automatically** if def
 
 Let's write an _init() function.  Inside of the function, we will **call** a function that is already defined by Pico8 called cls().  cls() is useful because it clears the screen every time it's called.  Once we've written this code, our game will clear the screen each time the game starts.
 
-##### Our Code Should Look Like:
+##### Our New Code Should Look Like:
 ```
 function _init()
   cls()
@@ -89,7 +96,7 @@ end
 
 ## Three: Functions and Special Function _draw()
 
-##### Our Code Should Look Like:
+##### Our New Code Should Look Like:
 ```
 function _draw()
   cls()
@@ -100,7 +107,7 @@ end
 
 ## Four-- Special Function _update and Conditionals
 
-##### Our Code Should Look Like:
+##### Our New Code Should Look Like:
 ```
 function _update()
 	if (btn(0)) then
