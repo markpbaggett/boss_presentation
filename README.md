@@ -1,10 +1,12 @@
 # BOSS Presentation
 
+## About Presentation
+
+The following materials are for use in the [Pico 8](http://www.lexaloffle.com/pico-8.php) workshop at [Big Orange Stem Saturday](https://www.lib.utk.edu/outreach/soil/b-o-s-s/) on April 8, 2017
+
 ## About Pico 8
 
 [PICO-8](http://www.lexaloffle.com/pico-8.php) is a fantasy console for making, sharing and playing tiny games and other computer programs. When you turn it on, the machine greets you with a shell for typing in Lua commands and provides simple built-in tools for creating your own cartridges.
-
-
 
 Some technical specifications:
 
