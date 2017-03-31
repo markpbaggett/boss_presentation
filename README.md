@@ -2,7 +2,7 @@
 
 ## About Presentation
 
-The following materials are for use in the [Pico 8](http://www.lexaloffle.com/pico-8.php) workshop at [Big Orange Stem Saturday](https://www.lib.utk.edu/outreach/soil/b-o-s-s/) on April 8, 2017
+The following materials are for use in the [Pico 8](http://www.lexaloffle.com/pico-8.php) workshop at [Big Orange Stem Saturday](https://www.lib.utk.edu/outreach/soil/b-o-s-s/) on April 8, 2017.
 
 ## About Pico 8
 
@@ -59,7 +59,7 @@ To get started, let's write some code to represent the hero of our game.  In you
 
 We also need variables for where we will display our sprites on the screen.  Remember, the display is 128 x 128 pixels. Let's write variables to put our food in the upper-left corner of the screen, and our hero lower and to the right.
 
-##### Our Code Should Look Like
+##### Our Code Should Look Like:
 ```
 start_hero = 12
 hero = start_hero
@@ -72,7 +72,15 @@ hero_y = 80
 
 ## Two: Functions and Special Function _init()
 
-##### Code
+In programming, a **function** is a block of code that performs a specific task when its called. Functions are important because they all you to repeat the same tasks without having to write all the instructions over again.
+
+We will write and call several functions throughout the course of our game.
+
+In Pico8, there are 3 special functions that are called **automatically** if defined by the user.  The first is _init().  _init() is called once on program start up.
+
+Let's write an _init() function.  Inside of the function, we will **call** a function that is already defined by Pico8 called cls().  cls() is useful because it clears the screen every time it's called.  Once we've written this code, our game will clear the screen each time the game starts.
+
+##### Our Code Should Look Like:
 ```
 function _init()
   cls()
@@ -81,7 +89,7 @@ end
 
 ## Three: Functions and Special Function _draw()
 
-##### Code
+##### Our Code Should Look Like:
 ```
 function _draw()
   cls()
@@ -92,7 +100,7 @@ end
 
 ## Four-- Special Function _update and Conditionals
 
-##### Code
+##### Our Code Should Look Like:
 ```
 function _update()
 	if (btn(0)) then
