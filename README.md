@@ -156,3 +156,20 @@ Let's add a cls() call at the beginning of our _draw() function.
 cls()
 
 ```
+
+## Six:  Collision Detection
+
+We need to figure out a way to determine when our hero eats the food. How can we do that?
+
+Basically, if our character gets near the upper left hand corner of the sprite, we want it to disappear.
+
+So, we need to test where our character is in conjunction to our food, and when he gets within 5 pixels or so, change our food sprite to blank.
+
+##### Add this New Code to the Beginning of our _update():
+
+```
+if (char_x > food_x - 5 and char_x <= food_x + 5) and (char_y >= food_y - 5 and char_y <= food_y + 5) then
+food = 33
+end
+
+```
