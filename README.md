@@ -27,7 +27,15 @@ Some technical specifications:
 * [A Pico-8 Space Shooter in 16 Gifs](https://ztiromoritz.github.io/pico-8-shooter/): Learn how to write a spaceshooter in Pico-8 in 16 gifs.
 * [Pico-8 Cheat Sheet](https://ztiromoritz.github.io/pico-8-spick/index_en.html): Awesome Cheat sheet for Pico-8.
 
+## What Are We Making?
+
+Today, we're going to be building a game called "[American Eating Champion](http://www.lexaloffle.com/bbs/?tid=29115)".  It's a very basic game with very few programming concepts.  Let's check it out before we get started.
+
 ## Starting Up Pico-8
+
+From the Apple Dock, click the Pico-8 icon. Once Pico-8 has booted, type **SPLORE**. Scroll to right and find Search. Type **"American"** and press return. Click **"American Eating Champion."**  This is our tutorial game.  We'll use it for the Sprites.
+
+Press escape to enter our editor.
 
 ## The Sprite Editor
 
@@ -53,6 +61,8 @@ This is where we will write all the code that defines our game.
 While it can be hard to read due to the 128 x 128 screen size, the code editor is nice because it helps you spot errors in your code by supporting syntax highlighting.
 
 ![Example Code Editor](images/codeeditor.png)
+
+Let's delete all the code here before we start (don't cheat).
 
 ## One:  Variables
 
@@ -96,31 +106,53 @@ end
 
 ## Three: Functions and Special Function _draw()
 
+Another special function in Pico-8 is called **_draw()**. Like _init(), _draw() is called automatically during program execution, however it is called 30 times per second (by default).  _draw() is used to draw our sprite graphics and any other messages to the screen.
+
+Let's define our new function _draw(). Inside of the body, let's call the sprite function twice to draw our food and our hero.  The sprite function takes 3 arguments. The first one is the number of the sprite we want to call.  The second is the x coordinate, and the third is the y coordinate. Since we have variables assigned for each of these, let's use those.  Let's call a second sprite function for our hero.
+
 ##### Our New Code Should Look Like:
 ```
 function _draw()
-  cls()
   spr(food, food_x, food_y)
   spr(hero, hero_x, hero_y)
 end
 ```
 
-## Four-- Special Function _update and Conditionals
+## Four: Special Function _update() and Conditionals
+
+Our final special function is** _update()**. Like _draw(), update is call 30 times per second (by default) automatically during program execution. The intended purpose of _update() is to test for user inputs (button presses), perform all of the calculations to advance the state of the game, and update the game's data structures with the results. Typically, this function does not update the display, though it may initiate sound effects (sfx()) and music (music()).
+
+In programming, conditional statements test whether a statment is true or false.  In this section, we will use conditionals to test if a user presses a button.  It they do press a button, we will write code to move our character in a direction. In Pico-8, a conditional block can have an if block (required), multiple elseif blocks (optional), and an else block (optional). For now, we will just use ifs.  The block must end with the keyword end.
 
 ##### Our New Code Should Look Like:
 ```
 function _update()
-	if (btn(0)) then
-			char_x = char_x - move
-	end
-	if (btn(1)) then
-			char_x = char_x + move
-	end
-	if (btn(2)) then
-			char_y = char_y - move
-	end
-	if (btn(3)) then
-		 char_y = char_y + move
-	end
+  if (btn(0)) then
+    char_x = char_x - move
+  end
+  if (btn(1)) then
+    char_x = char_x + move
+  end
+  if (btn(2)) then
+    char_y = char_y - move
+  end
+  if (btn(3)) then
+    char_y = char_y + move
+  end
 end
+```
+
+## Five: Update _draw()
+
+Now, let's execute our program.  Press Escape and type "run". This looks weird. Why? 
+
+That's because the screen isn't getting cleared.
+
+Let's add a cls() call at the beginning of our _draw() function.
+
+##### Add this New Code to the Beginning of our _draw():
+
+```
+cls()
+
 ```
