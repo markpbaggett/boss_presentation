@@ -128,16 +128,16 @@ In programming, conditional statements test whether a statment is true or false.
 ```
 function _update()
   if (btn(0)) then
-    char_x = char_x - move
+    hero_x = hero_x - move
   end
   if (btn(1)) then
-    char_x = char_x + move
+    hero_x = hero_x + move
   end
   if (btn(2)) then
-    char_y = char_y - move
+    hero_y = hero_y - move
   end
   if (btn(3)) then
-    char_y = char_y + move
+    hero_y = hero_y + move
   end
 end
 ```
@@ -168,7 +168,7 @@ So, we need to test where our character is in conjunction to our food, and when 
 ##### Add this New Code to the Beginning of our _update():
 
 ```
-if (char_x > food_x - 5 and char_x <= food_x + 5) and (char_y >= food_y - 5 and char_y <= food_y + 5) then
+if (hero_x >= food_x - 5 and hero_x <= food_x + 5) and (hero_y >= food_y - 5 and hero_y <= food_y + 5) then
 food = 33
 end
 
