@@ -78,13 +78,14 @@ We also need variables for where we will display our sprites on the screen.  Rem
 
 ##### Our New Code Should Look Like:
 ```
-start_hero = 12
-hero = start_hero
+
+hero = 12
 food = 16
 food_x = 20
 food_y = 20
 hero_x = 80
 hero_y = 80
+move = 1
 ```
 
 ## Two: Functions and Special Function _init()
@@ -173,3 +174,4 @@ food = 33
 end
 
 ```
+
