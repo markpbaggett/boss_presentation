@@ -175,3 +175,22 @@ end
 
 ```
 
+## Seven: Wrap Around
+
+Our code now makes our food disappear when our hero collides with it. But we have a problem: when our hero goes too far in one direction, he disappears.  What we want to do is have our hero **wrap around** when he ventures too far in one direction.
+
+To handle this, we need to add code to set our hero's x to the left side of the screen when he gets too far rights and vice versa. The same needs to be done to our y coordinate.
+
+##### Add this New Code to Our _update():
+
+```
+if (hero_x >= 120) then
+hero_x = 8
+elseif (hero_x <= 8) then
+hero_x = 120
+elseif (hero_y >= 120) then
+hero_y = 8
+elseif (hero_y <= 8) then
+hero_y = 120
+end
+```
