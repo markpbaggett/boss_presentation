@@ -26,6 +26,7 @@ Some technical specifications:
 * [Pico Awesome List](https://github.com/felipebueno/awesome-PICO-8): A curated list of awesome PICO-8 resources, carts, tools, and more.
 * [A Pico-8 Space Shooter in 16 Gifs](https://ztiromoritz.github.io/pico-8-shooter/): Learn how to write a spaceshooter in Pico-8 in 16 gifs.
 * [Pico-8 Cheat Sheet](https://ztiromoritz.github.io/pico-8-spick/index_en.html): Awesome Cheat sheet for Pico-8.
+* [PocketCHIP](https://getchip.com/pages/pocketchip): like a GameBoy, but for Pico-8.
 
 ## What Are We Making?
 
