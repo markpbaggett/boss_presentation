@@ -77,8 +77,8 @@ To get started, let's write some code to represent the hero of our game.  In you
 We also need variables for where we will display our sprites on the screen.  Remember, the display is 128 x 128 pixels. Let's write variables to put our food in the upper-left corner of the screen, and our hero lower and to the right.
 
 ##### Our New Code Should Look Like:
-```
 
+```
 hero = 12
 food = 16
 food_x = 20
@@ -192,5 +192,32 @@ elseif (hero_y >= 120) then
 hero_y = 8
 elseif (hero_y <= 8) then
 hero_y = 120
+end
+```
+
+## Eight: Randomizing Food
+
+Let's make it so when we eat a food, a new food appears randomly on our screen. To start, let's define a new function.  Inside the function, let's call the rnd() function. rnd(), or random, takes a numerical argument (maximum) and randomly selects a number between 0 and it. You can get rnd() to start at a number besides 0 by adding the minimum number in the range.
+
+Finally, rnd() returns a fractional part -- not an integer.  Since we're using rnd() to generate a sprite, we need to use flr() (floor) on our new sprite.  flr() rounds a number down to an integer
+
+
+##### Define this New Function
+```
+function new_food()
+ food = rnd(17) + 16
+ food = flr(food)
+ food_x = rnd(100) + 10
+ food_y = rnd(100) + 10
+end
+```
+
+Once the new_food() function is defined, let's call it when our other food is eaten to generate a new food.
+
+##### Update the _update Function
+
+```
+if (hero_x >= food_x - 5 and hero_x <= food_x + 5) and (hero_y >= food_y - 5 and hero_y <= food_y + 5) then
+new_food()
 end
 ```
