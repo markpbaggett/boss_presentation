@@ -64,7 +64,7 @@ While it can be hard to read due to the 128 x 128 screen size, the code editor i
 
 Let's delete all the code here before we start (don't cheat).
 
-## One:  Variables
+## [One:  Variables](https://gist.github.com/markpbaggett/9307d3ee9f83132fd3cd0204c0848341)
 
 Let's get started.
 
@@ -88,7 +88,7 @@ hero_y = 80
 move = 1
 ```
 
-## Two: Functions and Special Function _init()
+## [Two: Functions and Special Function _init()](https://gist.github.com/markpbaggett/71bc91182ce5c75a228ae23bd6f57e04)
 
 In programming, a **function** is a block of code that performs a specific task when its called. Functions are important because they all you to repeat the same tasks without having to write all the instructions over again.
 
@@ -105,7 +105,7 @@ function _init()
 end
 ```
 
-## Three: Functions and Special Function _draw()
+## [Three: Functions and Special Function _draw()](https://gist.github.com/markpbaggett/c91f16fabb11042a93d901ad72dd5e47)
 
 Another special function in Pico-8 is called **_draw()**. Like _init(), _draw() is called automatically during program execution, however it is called 30 times per second (by default).  _draw() is used to draw our sprite graphics and any other messages to the screen.
 
@@ -119,7 +119,7 @@ function _draw()
 end
 ```
 
-## Four: Special Function _update() and Conditionals
+## [Four: Special Function _update() and Conditionals](https://gist.github.com/markpbaggett/cb6b00b2c563aa45bc2f1cf35e9d29cb)
 
 Our final special function is** _update()**. Like _draw(), update is call 30 times per second (by default) automatically during program execution. The intended purpose of _update() is to test for user inputs (button presses), perform all of the calculations to advance the state of the game, and update the game's data structures with the results. Typically, this function does not update the display, though it may initiate sound effects (sfx()) and music (music()).
 
@@ -143,7 +143,7 @@ function _update()
 end
 ```
 
-## Five: Update _draw()
+## [Five: Update _draw()](https://gist.github.com/markpbaggett/49c6ba67b9b8c1e52d7f8e06e115cea0)
 
 Now, let's execute our program.  Press Escape and type "run". This looks weird. Why? 
 
@@ -158,7 +158,7 @@ cls()
 
 ```
 
-## Six:  Collision Detection
+## [Six:  Collision Detection](https://gist.github.com/markpbaggett/02aa49bd43741ae7871644b3b2f2db7a)
 
 We need to figure out a way to determine when our hero eats the food. How can we do that?
 
@@ -175,7 +175,7 @@ end
 
 ```
 
-## Seven: Wrap Around
+## [Seven: Wrap Around](https://gist.github.com/markpbaggett/c136dc31953bebb377503acf07175cd3)
 
 Our code now makes our food disappear when our hero collides with it. But we have a problem: when our hero goes too far in one direction, he disappears.  What we want to do is have our hero **wrap around** when he ventures too far in one direction.
 
@@ -195,7 +195,7 @@ hero_y = 120
 end
 ```
 
-## Eight: Randomizing Food
+## [Eight: Randomizing Food](https://gist.github.com/markpbaggett/4c31d0e9e447ee2849c5f525aa5391b7)
 
 Let's make it so when we eat a food, a new food appears randomly on our screen. To start, let's define a new function.  Inside the function, let's call the rnd() function. rnd(), or random, takes a numerical argument (maximum) and randomly selects a number between 0 and it. You can get rnd() to start at a number besides 0 by adding the minimum number in the range.
 
